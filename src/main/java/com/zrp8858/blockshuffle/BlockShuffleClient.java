@@ -1,4 +1,4 @@
-package com.zuke2005.blockshuffle;
+package com.zrp8858.blockshuffle;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;

@@ -5,14 +5,14 @@
   "name": "Block Placement Shuffler",
   "description": "Press a hotkey to enter shuffle mode. While active, placing a block randomly reselects another placeable block from your hotbar.",
   "authors": [
-    "zuke2005"
+    "zrp8858"
   ],
   "license": "ARR",
   "icon": "assets/block-placement-shuffler/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.zuke2005.blockshuffle.BlockShuffleClient"
+      "com.zrp8858.blockshuffle.BlockShuffleClient"
     ]
   },
   "depends": {
