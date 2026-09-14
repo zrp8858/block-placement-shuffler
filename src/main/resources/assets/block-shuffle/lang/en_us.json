@@ -1,0 +1,6 @@
+{
+  "key.categories.block-shuffle": "Block Shuffle",
+  "key.block-shuffle.toggle": "Toggle Shuffle Mode",
+  "message.block-shuffle.enabled": "Shuffle mode enabled",
+  "message.block-shuffle.disabled": "Shuffle mode disabled"
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "block-placement-shuffler",
+  "version": "${version}",
+  "name": "Block Placement Shuffler",
+  "description": "Press a hotkey to enter shuffle mode. While active, placing a block randomly reselects another placeable block from your hotbar.",
+  "authors": [
+    "zuke2005"
+  ],
+  "license": "ARR",
+  "icon": "assets/block-placement-shuffler/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.zuke2005.blockshuffle.BlockShuffleClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
