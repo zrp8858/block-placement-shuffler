@@ -10,6 +10,10 @@
   "license": "ARR",
   "icon": "assets/block-placement-shuffler/icon.png",
   "environment": "client",
+  "contact": {
+    "sources": "https://github.com/zrp8858/block-placement-shuffler",
+    "issues": "https://github.com/zrp8858/block-placement-shuffler/issues"
+  },
   "entrypoints": {
     "client": [
       "com.zrp8858.blockshuffle.BlockShuffleClient"

@@ -2,6 +2,8 @@
 
 A Fabric mod for Minecraft 26.2 by **zrp8858**.
 
+Source: [github.com/zrp8858/block-placement-shuffler](https://github.com/zrp8858/block-placement-shuffler)
+
 Press a hotkey (default `R`, rebindable under Options -> Controls -> Key
 Binds -> Block Placement Shuffler) to toggle **shuffle mode**. While it's on, every time
 you place a block, the mod randomly reselects a different placeable block
