@@ -10,6 +10,10 @@ repositories {
     // You should only use this when depending on other mods because
     // Loom adds the essential maven repositories to download Minecraft and
     // libraries from automatically.
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/releases/"
+    }
 }
 
 dependencies {
@@ -25,6 +29,12 @@ dependencies {
     // Fabric API. Technically optional, but this mod uses it for the
     // keybinding and block-use hooks.
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // Mod Menu API, compile-only: our "modmenu" entrypoint (see
+    // BlockPlacementShufflerModMenu) is only ever invoked by Mod Menu
+    // itself, which is only on the classpath when the player has it
+    // installed -- so it must not be bundled or required at runtime.
+    compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {

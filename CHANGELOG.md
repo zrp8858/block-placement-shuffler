@@ -9,6 +9,8 @@
 - Made the toggle status message clearer: it now reads "Shuffle Mode: ON/OFF"
   with an on/off glyph, in green for on and red for off, instead of the same
   gold text for both states.
+- Added Mod Menu support: if Mod Menu is installed, this mod's "Configure"
+  button opens vanilla's Controls screen directly.
 
 ## 1.0.0
 
