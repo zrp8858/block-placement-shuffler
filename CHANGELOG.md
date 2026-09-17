@@ -1,5 +1,10 @@
 # Changelog — Block Placement Shuffler
 
+## 1.0.0+26.2
+
+- Adopted a `MAJOR.MINOR.PATCH+MCVERSION` versioning scheme; this build
+  targets Minecraft 26.2.
+
 ## 1.0.0
 
 - Initial release for Minecraft 26.2 (Fabric).

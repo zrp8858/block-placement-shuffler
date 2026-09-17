@@ -51,7 +51,7 @@ mappings-based build entirely -- see below).
 ./gradlew build
 ```
 
-The output jar lands in `build/libs/block-placement-shuffler-1.0.0.jar`.
+The output jar lands in `build/libs/block-placement-shuffler-1.0.0+26.2.jar`.
 
 To test directly from the project:
 
