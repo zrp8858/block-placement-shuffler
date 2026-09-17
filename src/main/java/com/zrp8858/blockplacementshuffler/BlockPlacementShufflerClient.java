@@ -59,9 +59,12 @@ public class BlockPlacementShufflerClient implements ClientModInitializer {
     private static final int STATUS_DURATION_TICKS = 60;
     private static final int STATUS_FADE_TICKS = 20;
 
-    // Pixels above the hotbar (which starts at guiHeight() - 22) to draw the
-    // status message -- tight, unlike vanilla's action bar which leaves a
-    // large gap above the hotbar.
+    // Where the vanilla hotbar sprite starts, in pixels up from the bottom of
+    // the screen (see Hud.extractItemHotbar).
+    private static final int HOTBAR_TOP_INSET = 22;
+
+    // Pixels above the hotbar to draw the status message -- tight, unlike
+    // vanilla's action bar which leaves a large gap above the hotbar.
     private static final int STATUS_Y_OFFSET_ABOVE_HOTBAR = 11;
 
     private static KeyMapping toggleKey;
@@ -154,7 +157,7 @@ public class BlockPlacementShufflerClient implements ClientModInitializer {
         Font font = Minecraft.getInstance().font;
         int width = font.width(statusMessage);
         int x = graphics.guiWidth() / 2 - width / 2;
-        int y = graphics.guiHeight() - 22 - STATUS_Y_OFFSET_ABOVE_HOTBAR;
+        int y = graphics.guiHeight() - HOTBAR_TOP_INSET - STATUS_Y_OFFSET_ABOVE_HOTBAR;
         graphics.text(font, statusMessage, x, y, ARGB.white(alpha));
     }
 
