@@ -1,4 +1,4 @@
-package com.zrp8858.blockshuffle;
+package com.zrp8858.blockplacementshuffler;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
@@ -34,7 +34,7 @@ import java.util.List;
  * you place a block the mod randomly reselects a different placeable block
  * from your hotbar, so your next placement is a surprise.
  */
-public class BlockShuffleClient implements ClientModInitializer {
+public class BlockPlacementShufflerClient implements ClientModInitializer {
     public static final String MOD_ID = "block-placement-shuffler";
     public static final Logger LOG = LoggerFactory.getLogger("Block Placement Shuffler");
 
@@ -63,8 +63,8 @@ public class BlockShuffleClient implements ClientModInitializer {
                 category
         ));
 
-        ClientTickEvents.END_CLIENT_TICK.register(BlockShuffleClient::onEndTick);
-        UseBlockCallback.EVENT.register(BlockShuffleClient::onUseBlock);
+        ClientTickEvents.END_CLIENT_TICK.register(BlockPlacementShufflerClient::onEndTick);
+        UseBlockCallback.EVENT.register(BlockPlacementShufflerClient::onUseBlock);
 
         LOG.info("Block Placement Shuffler initialized. Default toggle key: R (change it in Controls -> Block Placement Shuffler).");
     }

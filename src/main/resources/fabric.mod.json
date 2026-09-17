@@ -16,7 +16,7 @@
   },
   "entrypoints": {
     "client": [
-      "com.zrp8858.blockshuffle.BlockShuffleClient"
+      "com.zrp8858.blockplacementshuffler.BlockPlacementShufflerClient"
     ]
   },
   "depends": {
