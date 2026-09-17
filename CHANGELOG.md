@@ -4,6 +4,8 @@
 
 - Adopted a `MAJOR.MINOR.PATCH+MCVERSION` versioning scheme; this build
   targets Minecraft 26.2.
+- Fixed the toggle click sound being backwards: enabling shuffle mode now
+  plays `TRIPWIRE_CLICK_ON` and disabling it plays `TRIPWIRE_CLICK_OFF`.
 
 ## 1.0.0
 

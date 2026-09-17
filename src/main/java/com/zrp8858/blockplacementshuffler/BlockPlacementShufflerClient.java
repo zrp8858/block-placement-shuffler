@@ -83,11 +83,11 @@ public class BlockPlacementShufflerClient implements ClientModInitializer {
             if (shuffleEnabled) {
                 client.gui.hud.setOverlayMessage(
                         Component.translatable("message.block-placement-shuffler.enabled").withStyle(STATUS_STYLE), false);
-                player.playSound(SoundEvents.TRIPWIRE_CLICK_OFF, 0.5f, 1.0f);
+                player.playSound(SoundEvents.TRIPWIRE_CLICK_ON, 0.5f, 1.0f);
             } else {
                 client.gui.hud.setOverlayMessage(
                         Component.translatable("message.block-placement-shuffler.disabled").withStyle(STATUS_STYLE), false);
-                player.playSound(SoundEvents.TRIPWIRE_CLICK_ON, 0.5f, 1.0f);
+                player.playSound(SoundEvents.TRIPWIRE_CLICK_OFF, 0.5f, 1.0f);
             }
         }
         keyWasDown = keyIsDown;
