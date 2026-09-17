@@ -12,6 +12,11 @@
   vanilla's action-bar position (which left a large gap above the hotbar).
 - Added Mod Menu support: if Mod Menu is installed, this mod's "Configure"
   button opens vanilla's Controls screen directly.
+- Fixed the keybind's category header in Controls: it was using the old
+  `key.categories.<id>` translation key format left over from before this
+  mod switched to the `KeyMapping.Category` API, so it showed up as an
+  untranslated raw key instead of "Block Placement Shuffler". Also renamed
+  the keybind itself to "Toggle Shuffle On/Off" for clarity.
 
 ## 1.0.0
 

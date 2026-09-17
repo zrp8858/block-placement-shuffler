@@ -1,6 +1,6 @@
 {
-  "key.categories.block-placement-shuffler": "Block Placement Shuffler",
-  "key.block-placement-shuffler.toggle": "Toggle Shuffle Mode",
+  "key.category.block-placement-shuffler.main": "Block Placement Shuffler",
+  "key.block-placement-shuffler.toggle": "Toggle Shuffle On/Off",
   "message.block-placement-shuffler.prefix": "Shuffle: ",
   "message.block-placement-shuffler.on": "ON",
   "message.block-placement-shuffler.off": "OFF"
