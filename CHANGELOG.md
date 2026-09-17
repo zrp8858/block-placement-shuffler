@@ -6,9 +6,10 @@
   targets Minecraft 26.2.
 - Fixed the toggle click sound being backwards: enabling shuffle mode now
   plays `TRIPWIRE_CLICK_ON` and disabling it plays `TRIPWIRE_CLICK_OFF`.
-- Made the toggle status message clearer: it now reads "Shuffle Mode: ON/OFF"
-  with an on/off glyph, in green for on and red for off, instead of the same
-  gold text for both states.
+- Redesigned the toggle status message: it now reads a gray "Shuffle: "
+  label followed by a bold green "ON" or bold red "OFF", instead of the same
+  gold text for both states, and is drawn just above the hotbar instead of
+  vanilla's action-bar position (which left a large gap above the hotbar).
 - Added Mod Menu support: if Mod Menu is installed, this mod's "Configure"
   button opens vanilla's Controls screen directly.
 
