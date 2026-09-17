@@ -11,7 +11,8 @@
   gold text for both states, and is drawn just above the hotbar instead of
   vanilla's action-bar position (which left a large gap above the hotbar).
 - Added Mod Menu support: if Mod Menu is installed, this mod's "Configure"
-  button opens vanilla's Controls screen directly.
+  button opens vanilla's Key Binds screen directly (not the general Controls
+  page, which is one click further away).
 - Fixed the keybind's category header in Controls: it was using the old
   `key.categories.<id>` translation key format left over from before this
   mod switched to the `KeyMapping.Category` API, so it showed up as an

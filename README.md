@@ -14,8 +14,8 @@ sound. Client-side only: install it locally and it works in singleplayer
 and on any server, no server-side install needed.
 
 If you also have [Mod Menu](https://modrinth.com/mod/modmenu) installed,
-this mod's "Configure" button in Mod Menu's mod list jumps straight to
-Controls -- this mod has no settings of its own beyond the keybind.
+this mod's "Configure" button in Mod Menu's mod list jumps straight to the
+Key Binds screen -- this mod has no settings of its own beyond the keybind.
 
 ## Sourced from / credits
 
@@ -36,7 +36,7 @@ Controls -- this mod has no settings of its own beyond the keybind.
 - [Fabric API](https://modrinth.com/mod/fabric-api) (required dependency)
 - Java 25
 - [Mod Menu](https://modrinth.com/mod/modmenu) (optional, adds a "Configure"
-  shortcut to this mod's Controls category)
+  shortcut straight to this mod's keybind)
 
 ## License
 
