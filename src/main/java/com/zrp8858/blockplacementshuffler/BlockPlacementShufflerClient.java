@@ -38,9 +38,10 @@ public class BlockPlacementShufflerClient implements ClientModInitializer {
     public static final String MOD_ID = "block-placement-shuffler";
     public static final Logger LOG = LoggerFactory.getLogger("Block Placement Shuffler");
 
-    // Vanilla "gold" (matches ChatFormatting.GOLD's RGB value, 0xFFAA00) used
-    // for the toggle status message.
-    private static final Style STATUS_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(0xFFAA00));
+    // Vanilla "green"/"red" (matching ChatFormatting.GREEN/RED) so on vs. off
+    // is distinguishable at a glance, not just by text.
+    private static final Style ENABLED_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(0x55FF55)).withBold(true);
+    private static final Style DISABLED_STYLE = Style.EMPTY.withColor(TextColor.fromRgb(0xFF5555)).withBold(true);
 
     private static KeyMapping toggleKey;
 
@@ -82,11 +83,11 @@ public class BlockPlacementShufflerClient implements ClientModInitializer {
 
             if (shuffleEnabled) {
                 client.gui.hud.setOverlayMessage(
-                        Component.translatable("message.block-placement-shuffler.enabled").withStyle(STATUS_STYLE), false);
+                        Component.translatable("message.block-placement-shuffler.enabled").withStyle(ENABLED_STYLE), false);
                 player.playSound(SoundEvents.TRIPWIRE_CLICK_ON, 0.5f, 1.0f);
             } else {
                 client.gui.hud.setOverlayMessage(
-                        Component.translatable("message.block-placement-shuffler.disabled").withStyle(STATUS_STYLE), false);
+                        Component.translatable("message.block-placement-shuffler.disabled").withStyle(DISABLED_STYLE), false);
                 player.playSound(SoundEvents.TRIPWIRE_CLICK_OFF, 0.5f, 1.0f);
             }
         }
