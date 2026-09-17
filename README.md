@@ -8,9 +8,14 @@ Press a hotkey (default `R`, rebindable under Options -> Controls -> Key
 Binds -> Block Placement Shuffler) to toggle **shuffle mode**. While it's on, every time
 you place a block, the mod randomly reselects a different placeable block
 from your hotbar -- non-block items (tools, food, etc.) are skipped when
-picking the next slot. Toggling shows a gold status message in the action
-bar with a click sound. Client-side only: install it locally and it works in
-singleplayer and on any server, no server-side install needed.
+picking the next slot. Toggling shows a "Shuffle: ON/OFF" status message
+(gray label, bold green/red state) just above the hotbar, with a click
+sound. Client-side only: install it locally and it works in singleplayer
+and on any server, no server-side install needed.
+
+If you also have [Mod Menu](https://modrinth.com/mod/modmenu) installed,
+this mod's "Configure" button in Mod Menu's mod list jumps straight to
+Controls -- this mod has no settings of its own beyond the keybind.
 
 ## Sourced from / credits
 
@@ -30,6 +35,8 @@ singleplayer and on any server, no server-side install needed.
 - [Fabric Loader](https://fabricmc.net/use/) 0.19.3+
 - [Fabric API](https://modrinth.com/mod/fabric-api) (required dependency)
 - Java 25
+- [Mod Menu](https://modrinth.com/mod/modmenu) (optional, adds a "Configure"
+  shortcut to this mod's Controls category)
 
 ## License
 
@@ -76,9 +83,21 @@ the accompanying Gui/Hud split:
   `KeyMapping.Category` object (registered via `KeyMapping.Category.register(Identifier...)`),
   not a raw string.
 - `ResourceLocation` was renamed to `Identifier`.
-- `Player.displayClientMessage(...)` was removed; action bar messages now go
-  through `Minecraft.getInstance().gui.hud.setOverlayMessage(...)`.
+- `Player.displayClientMessage(...)` was removed; the vanilla action-bar
+  message now goes through `Minecraft.getInstance().gui.hud.setOverlayMessage(...)`.
+  This mod doesn't use that anymore, though -- its own status message is a
+  custom HUD element (see below) so it can be positioned independently of
+  vanilla's fixed spot.
 - `Level.random` is now protected; use `level.getRandom()`.
+- Custom HUD content is registered through Fabric API's newer
+  `HudElementRegistry`/`HudElement` (package
+  `net.fabricmc.fabric.api.client.rendering.v1.hud`, from `fabric-rendering-v1`),
+  which replaces the old `HudRenderCallback`. Elements implement
+  `extractRenderState(GuiGraphicsExtractor, DeltaTracker)` rather than
+  drawing immediately -- the HUD is now a deferred render-state extraction
+  pass. See `BlockPlacementShufflerClient.extractStatusOverlay` for an
+  example, including how to read the vanilla hotbar's on-screen position
+  (`Hud.extractItemHotbar`) to line up custom elements next to it.
 
 ## Publishing checklist (CurseForge)
 
@@ -91,13 +110,13 @@ listing -- none of this is in the repo itself:
   when you create the project.
 - **Relations / Dependencies**: mark **Fabric API** as a required dependency
   so CurseForge (and the CurseForge launcher) installs it automatically
-  alongside this mod.
+  alongside this mod. Mark **Mod Menu** as an optional dependency.
 - **Game version / loader tags**: tag the uploaded jar with Minecraft 26.2
   and Fabric when you upload it.
 - **Category**: something like "Utility & QoL" fits.
 - **Icon**: CurseForge wants a square image (recommend at least 256x256,
-  PNG) for the project icon -- there isn't one in this repo yet, so add one
-  when you create the listing.
+  PNG) for the project icon -- use `logo/block-placement-shuffler-icon-256.png`
+  or the `-512.png` version.
 - **Description**: the "Sourced from / credits" and top description section
   of this README can be adapted directly into the CurseForge project
   description field.
