@@ -1,5 +1,11 @@
 # Changelog — Block Placement Shuffler
 
+## 1.0.0+26.3
+
+- Ported to Minecraft 26.3: `InputConstants.Type.KEYSYM` was renamed to
+  `KEYBOARD`, and Fabric Loader/Fabric API were bumped to 0.19.5+ and
+  `0.160.7+26.3` respectively.
+
 ## 1.0.0+26.2
 
 - Adopted a `MAJOR.MINOR.PATCH+MCVERSION` versioning scheme; this build

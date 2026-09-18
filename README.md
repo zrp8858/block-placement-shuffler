@@ -1,6 +1,6 @@
 # Block Placement Shuffler
 
-A Fabric mod for Minecraft 26.2 by **zrp8858**.
+A Fabric mod for Minecraft 26.3 by **zrp8858**.
 
 Source: [github.com/zrp8858/block-placement-shuffler](https://github.com/zrp8858/block-placement-shuffler)
 
@@ -19,8 +19,9 @@ Key Binds screen -- this mod has no settings of its own beyond the keybind.
 
 ## Sourced from / credits
 
-- Built for Minecraft 26.2 using [FabricMC's own `fabric-example-mod`](https://github.com/FabricMC/fabric-example-mod)
-  (`26.2` branch) as the reference for build configuration.
+- Originally built for Minecraft 26.2 using [FabricMC's own `fabric-example-mod`](https://github.com/FabricMC/fabric-example-mod)
+  (`26.2` branch) as the reference for build configuration; ported forward
+  to newer Minecraft versions as they release (currently 26.3).
 - The core idea -- a hotkey that toggles random hotbar reselection on block
   placement -- was popularized by [Trikzon's "Shuffle" mod](https://github.com/Trikzon/shuffle).
   No code from that project is used here; this is an independent
@@ -31,8 +32,8 @@ Key Binds screen -- this mod has no settings of its own beyond the keybind.
 
 ## Requirements
 
-- Minecraft 26.2
-- [Fabric Loader](https://fabricmc.net/use/) 0.19.3+
+- Minecraft 26.3
+- [Fabric Loader](https://fabricmc.net/use/) 0.19.5+
 - [Fabric API](https://modrinth.com/mod/fabric-api) (required dependency)
 - Java 25
 - [Mod Menu](https://modrinth.com/mod/modmenu) (optional, adds a "Configure"
@@ -58,7 +59,7 @@ mappings-based build entirely -- see below).
 ./gradlew build
 ```
 
-The output jar lands in `build/libs/block-placement-shuffler-1.0.0+26.2.jar`.
+The output jar lands in `build/libs/block-placement-shuffler-1.0.0+26.3.jar`.
 
 To test directly from the project:
 
@@ -111,7 +112,7 @@ listing -- none of this is in the repo itself:
 - **Relations / Dependencies**: mark **Fabric API** as a required dependency
   so CurseForge (and the CurseForge launcher) installs it automatically
   alongside this mod. Mark **Mod Menu** as an optional dependency.
-- **Game version / loader tags**: tag the uploaded jar with Minecraft 26.2
+- **Game version / loader tags**: tag the uploaded jar with Minecraft 26.3
   and Fabric when you upload it.
 - **Category**: something like "Utility & QoL" fits.
 - **Icon**: CurseForge wants a square image (recommend at least 256x256,

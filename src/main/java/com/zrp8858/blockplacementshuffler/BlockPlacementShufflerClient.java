@@ -88,7 +88,7 @@ public class BlockPlacementShufflerClient implements ClientModInitializer {
 
         toggleKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.block-placement-shuffler.toggle",
-                InputConstants.Type.KEYSYM,
+                InputConstants.Type.KEYBOARD,
                 InputConstants.KEY_R,
                 category
         ));
